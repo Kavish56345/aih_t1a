@@ -1,0 +1,390 @@
+{
+    "title": "Structure Extractor: Multilingual Extraction of Sections from Scientiﬁc Document",
+    "outline": [
+        {
+            "level": "H2",
+            "text": "and theses consist of the following sections: title, contents,",
+            "page": 1
+        },
+        {
+            "text": "each text part, matches the extracted data with its positions All the other sections are extracted in the following way.",
+            "page": 4,
+            "level": "H1"
+        },
+        {
+            "text": "in text and uses it to extract the section boundaries instead of Another HistGradientBoosting model named Candidate Selec-",
+            "page": 4,
+            "level": "H1"
+        },
+        {
+            "text": "Candidate Selector. tor is trained on box features from IMRAD Dataset to predict",
+            "page": 4,
+            "level": "H1"
+        },
+        {
+            "text": "if the box is a candidate for any section header. Candidate First, title and contents sections are extracted with the help",
+            "page": 4,
+            "level": "H1"
+        },
+        {
+            "text": "Selector parameters are shown in Table III: of TitleCont Selector. Then, to get text positions of headers,",
+            "page": 4,
+            "level": "H1"
+        },
+        {
+            "text": "we look for all the < head > elements in XML ﬁle, take their coordinates (page number and coordinates on the page) and",
+            "page": 4,
+            "level": "H1"
+        },
+        {
+            "text": "match them with the text in the text layer. Bibliography text does not have any < head > elements, therefore a similar proce-",
+            "page": 4,
+            "level": "H1"
+        },
+        {
+            "level": "H1",
+            "text": "dure is performed on the children of < div type=“references” >",
+            "page": 4
+        },
+        {
+            "level": "H1",
+            "text": "element: the text coordinates are extracted and the text inter-",
+            "page": 4
+        },
+        {
+            "level": "H1",
+            "text": "vals are obtained. These text intervals for bibliography serve",
+            "page": 4
+        },
+        {
+            "level": "H1",
+            "text": "as the new pipeline’s prediction of bibliography section.",
+            "page": 4
+        },
+        {
+            "text": "After getting the text intervals of headers and bibliography we replace the output of Candidate Selector model with the",
+            "page": 4,
+            "level": "H1"
+        },
+        {
+            "text": "With these parameters we get precision of 0.05 and recall of headers from GROBID. Like in our original pipeline, they are",
+            "page": 4,
+            "level": "H1"
+        },
+        {
+            "text": "then classiﬁed as document sections with the help of keywords. into headers based on the presence of the section keywords in",
+            "page": 4,
+            "level": "H1"
+        },
+        {
+            "text": "The annotation of the remaining text is done in the same way: them. The boxes after the section header are classiﬁed as the",
+            "page": 4,
+            "level": "H1"
+        },
+        {
+            "text": "the boxes between the headers belong to an earlier header’s corresponding section until the header of the next section or",
+            "page": 4,
+            "level": "H1"
+        },
+        {
+            "text": "section. The aforementioned bibliography intervals are added until the limit of headers belonging to the section is exceeded.",
+            "page": 4,
+            "level": "H1"
+        },
+        {
+            "text": "to the ﬁnal result. This limit for candidates is individual for each section and is",
+            "page": 4,
+            "level": "H1"
+        },
+        {
+            "text": "Such a “hybrid” pipeline allows to compare the performance in the range of [1, 40].",
+            "page": 4,
+            "level": "H1"
+        },
+        {
+            "text": "of a model that plays a key role in detecting IMRAD structure with another open-source solution. Integration of GROBID",
+            "page": 4,
+            "level": "H1"
+        },
+        {
+            "text": "helps to get the same output as the original pipeline, so that the same metrics for both approaches could be calculated.",
+            "page": 4,
+            "level": "H1"
+        },
+        {
+            "text": "We tune both models using hyperopt package [27] with the negative F-measure as the optimization target. We consider",
+            "page": 4,
+            "level": "H1"
+        },
+        {
+            "text": "maintaining moderate performance on challenging sections of the section causing them to get misclassiﬁed. Having a",
+            "page": 6,
+            "level": "H1"
+        },
+        {
+            "text": "like methods. The application named Structure Extractor is separate section entity for headers and footers could help a lot",
+            "page": 6,
+            "level": "H1"
+        },
+        {
+            "text": "created on the basis of this model pipeline, and due to its with ﬁltering false positive cases and improving performance",
+            "page": 6,
+            "level": "H1"
+        },
+        {
+            "text": "high performance speed it is possible to use the application on other structure-related tasks.",
+            "page": 6,
+            "level": "H1"
+        },
+        {
+            "level": "H1",
+            "text": "in production. It is already embedded in our text reuse de-",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "tection system which helped to improve the quality of other",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "production applications: a detection of a machine generated",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "text, annotation extraction, and table extraction services. The",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "false positive rate of these services decreased by more than 2.5",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "times with the use of Structure Extractor. To mitigate potential",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "adversarial attacks, Structure Extractor is used in ensemble",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "with modules that detect speciﬁc sections of the documents,",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "and postprocessing of the results is performed to correct the",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "detection errors.",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "While the model produces quality results, there are a",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "few limitations for it. Firstly, multilanguage settings are",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "constrained by IMRAD keywords. While the approach isn’t",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "restricted to any speciﬁc language or group of languages",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "and can be easily scaled, one needs to add language-speciﬁc",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "keywords for the section headers to add the support of a",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "new language. This process could potentially be automated",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "with another model translating the most common keywords",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "to different languages, but construction of the fully-automatic",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "system is beyond the scope of this article.",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "Secondly, our solution shows a drop in quality on docu-",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "ments with non-standard section structure. If the names of",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "the headers do not contain IMRAD keywords, there will be",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "signiﬁcant false negative and false positive rates for sections.",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "This situation is less common in scientiﬁc documents except",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "for the methods section, so generally they are affected very",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "little by it. Possible solutions to scaling the model to any",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "document type include extensive use of document layout",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "information and visual information, but that would also require",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "more resources and more computation time.",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "Future study on the topic includes further comparison of",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "the model performance to other solutions with potential imple-",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "mentation of approaches proposed in other articles. Extracting",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "the document sections with large language models would be",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "an interesting task. While this approach certainly has its own",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "drawbacks in terms of resources consumption and postprocess-",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "ing of the LLM output, it could potentially help with speeding",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "up the annotation process for document sections. Using other",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "approaches in an ensemble with the current models can also",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "help to improve the overall performance of the solution.",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "In terms of the performance improvement it will also be",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "useful to further assess the differences between scientiﬁc",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "document structure in different languages. Increasing lists",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "of keywords and reﬁning the ﬁltering procedure of headers",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "can allow for a better extraction of sections like results and",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "methods.",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "Another direction of research is detection of page headers",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "and footers and integration of such detector into the solution",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "pipeline. While some headers and footers contain only page",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "numbers and do not interfere with the header extraction",
+            "page": 6
+        }
+    ]
+}

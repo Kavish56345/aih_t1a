@@ -1,0 +1,75 @@
+{
+    "title": "A Review of Yolo Algorithm Developments A Review of Yolo Algorithm Developments",
+    "outline": [
+        {
+            "level": "H1",
+            "text": "ScienceDirect",
+            "page": 1
+        },
+        {
+            "text": "(ITQM 2020 & 2021) (ITQM 2020 & 2021)",
+            "page": 1,
+            "level": "H3"
+        },
+        {
+            "text": "Peiyuan Jiang, Daji Ergu*, Fangyao Liu, Ying Cai, Bo Ma Peiyuan Jiang, Daji Ergu*, Fangyao Liu, Ying Cai, Bo Ma",
+            "page": 1,
+            "level": "H2"
+        },
+        {
+            "level": "H4",
+            "text": "2. Yolo Algorithm Developments",
+            "page": 2
+        },
+        {
+            "text": "2.2 Better 2.2.1 Batch normalization",
+            "page": 2,
+            "level": "H4"
+        },
+        {
+            "level": "H4",
+            "text": "2.2.2 High-resolution classifier",
+            "page": 2
+        },
+        {
+            "level": "H4",
+            "text": "2.2.3 Fine features",
+            "page": 2
+        },
+        {
+            "level": "H4",
+            "text": "2.2.4 Multi-scale training",
+            "page": 3
+        },
+        {
+            "level": "H4",
+            "text": "2.4 Relationship",
+            "page": 5
+        },
+        {
+            "level": "H4",
+            "text": "3. Public Data Insights",
+            "page": 5
+        },
+        {
+            "level": "H4",
+            "text": "3.1 Trends",
+            "page": 5
+        },
+        {
+            "level": "H4",
+            "text": "3.2 Public queries",
+            "page": 6
+        },
+        {
+            "level": "H4",
+            "text": "4. Conclusion",
+            "page": 7
+        },
+        {
+            "level": "H4",
+            "text": "References",
+            "page": 8
+        }
+    ]
+}

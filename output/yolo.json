@@ -1,0 +1,95 @@
+{
+    "title": "Automatic License Plate Detection using YOLOv9",
+    "outline": [
+        {
+            "level": "H1",
+            "text": "system instead of just a detection system. Some other",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "suggestions for improvement are",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "Speed and accuracy of detection can be increased by",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "using advanced cameras for input of HD video feed.",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "Another system can be added to differentiate public",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "support vehicles such as ambulances, buses, fire trucks,",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "police cars, etc. from other motor vehicles.",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "Statistics such as speed limits, current speed, text on",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "vehicles, etc. can also be taken into account to further",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "improve the algorithm. [20]",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "The OCR technique is susceptible to distortions,",
+            "page": 6
+        },
+        {
+            "text": "misalignments and",
+            "page": 6,
+            "level": "H1"
+        },
+        {
+            "text": "diverse dimensions",
+            "page": 6,
+            "level": "H1"
+        },
+        {
+            "level": "H1",
+            "text": "the",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "characters.",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "Therefore, training a custom model with varied types of",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "templates and with multiple RTO requirements can help",
+            "page": 6
+        },
+        {
+            "level": "H1",
+            "text": "additionally in character recognition.[18]",
+            "page": 6
+        }
+    ]
+}
