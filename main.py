@@ -251,7 +251,7 @@ def extract_title_and_headings(pdf_path):
             outline.append({
                 "level": size_to_level[current["size"]],
                 "text": current["text"],
-                "page": current["page"]
+                "page": current["page"]-1
             })
             seen_headings.add(current["text"])
         i += 1
